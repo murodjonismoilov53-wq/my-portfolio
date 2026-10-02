@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismoilov Murodjon | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(31, 41, 55, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-800/50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent flex items-center gap-2">
+                <i class="fa-solid fa-code text-blue-400"></i> Murodjon.dev
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">Men haqimda</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Ko'nikmalar</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Loyihalar</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Bog'lanish</a>
+            </nav>
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-600/20">
+                Bog'lanish
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+        <!-- Background Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-blue-400 text-sm font-medium animate-float">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Boshlang'ich Web Dasturchi
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Salom, Men <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Ismoilov Murodjon</span>
+            </h1>
+            <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Zamonaviy va moslashuvchan veb-sahifalar yaratishni o'rganib borayotgan yosh dasturchiman. Ilk qadamlarni tashlab, o'z bilimlarimni amalda sinamoqdaman.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow-xl shadow-blue-600/25 flex items-center gap-2">
+                    <i class="fa-solid fa-folder-open"></i> Loyihalarimni ko'rish
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-xl glass hover:bg-gray-800 text-gray-200 font-medium transition-all">
+                    Bog'lanish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 border-t border-gray-800/40">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+                <i class="fa-solid fa-user-pen text-blue-400"></i> Men Haqimda
+            </h2>
+            <div class="glass-card p-8 sm:p-10 rounded-2xl relative">
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+                    Men veb-dasturlash olamiga qiziqib, o'z ustimda ishlayotgan boshlang'ich dasturchiman. Hozirgi kunga qadar veb-sahifalarning tuzilishini belgilash (<span class="text-blue-400 font-medium">HTML</span>), ularni bezash (<span class="text-blue-400 font-medium">CSS</span>, <span class="text-blue-400 font-medium">Bootstrap</span>) va loyihalarni internetga joylash texnologiyalarini muvaffaqiyatli o'zlashtirdim.
+                </p>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+                    Shuningdek, kodlarimni xavfsiz saqlash va boshqarish uchun <span class="text-blue-400 font-medium">Git va GitHub</span> hamda ularni tarqatish uchun <span class="text-blue-400 font-medium">Netlify</span> platformalaridan foydalanishni o'rgandim. Oldinda esa JavaScript va boshqa qiziqarli texnologiyalar turibdi!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 border-t border-gray-800/40">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-blue-400"></i> Ko'nikmalar va Vositalar
+            </h2>
+
+            <!-- Completed Skills -->
+            <div class="mb-12">
+                <h3 class="text-lg font-semibold text-blue-400 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check"></i> O'rganib tugatilgan bilimlar
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <!-- HTML -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+                        <span class="font-semibold text-gray-200">HTML5</span>
+                        <span class="text-xs text-gray-400">Struktura</span>
+                    </div>
+                    <!-- CSS -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-brands fa-css3-alt text-4xl text-blue-500"></i>
+                        <span class="font-semibold text-gray-200">CSS3</span>
+                        <span class="text-xs text-gray-400">Dizayn va uslub</span>
+                    </div>
+                    <!-- Bootstrap -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-brands fa-bootstrap text-4xl text-purple-500"></i>
+                        <span class="font-semibold text-gray-200">Bootstrap</span>
+                        <span class="text-xs text-gray-400">UI Framework</span>
+                    </div>
+                    <!-- Git -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-solid fa-code-branch text-4xl text-red-500"></i>
+                        <span class="font-semibold text-gray-200">Git</span>
+                        <span class="text-xs text-gray-400">Versiyalar nazorati</span>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-brands fa-github text-4xl text-gray-100"></i>
+                        <span class="font-semibold text-gray-200">GitHub</span>
+                        <span class="text-xs text-gray-400">Kod ombori</span>
+                    </div>
+                    <!-- Netlify -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-solid fa-cloud-arrow-up text-4xl text-teal-400"></i>
+                        <span class="font-semibold text-gray-200">Netlify</span>
+                        <span class="text-xs text-gray-400">Hosting & Deploy</span>
+                    </div>
+                    <!-- VS Code -->
+                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center gap-3">
+                        <i class="fa-solid fa-laptop-code text-4xl text-blue-400"></i>
+                        <span class="font-semibold text-gray-200">VS Code</span>
+                        <span class="text-xs text-gray-400">Muharrir</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In Progress Skills -->
+            <div>
+                <h3 class="text-lg font-semibold text-amber-400 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-spinner fa-spin"></i> O'rganish jarayonidagilar (Hozirda)
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-5 rounded-xl flex items-center gap-4">
+                        <i class="fa-brands fa-js text-4xl text-yellow-400"></i>
+                        <div>
+                            <h4 class="font-semibold text-gray-200">JavaScript</h4>
+                            <p class="text-xs text-gray-400">Interaktivlik va funksionallikni o'rganish jarayonida</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl flex items-center gap-4">
+                        <i class="fa-solid fa-rocket text-4xl text-indigo-400"></i>
+                        <div>
+                            <h4 class="font-semibold text-gray-200">Kelgusi texnologiyalar</h4>
+                            <p class="text-xs text-gray-400">Ilғor veb texnologiyalar va amaliyotlar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 border-t border-gray-800/40">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+                <i class="fa-solid fa-laptop-code text-blue-400"></i> Mening Loyiham
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-xl mx-auto">
+                <div class="glass-card rounded-2xl overflow-hidden border border-gray-800">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/30">Birinchi Loyiha</span>
+                            <span class="text-xs text-gray-400"><i class="fa-regular fa-calendar"></i> Sentyabr, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">Shaxsiy Portfolio Sahifasi</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                            HTML, CSS va zamonaviy yondashuvlar yordamida yaratilgan, Netlify orqali internetga muvaffaqiyatli joylangan ilk amaliy veb-loyiham.
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <a href="https://transcendent-starlight-b2cce7.netlify.app" target="_blank" class="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm text-center transition-all shadow-md shadow-blue-600/20 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-external-link-alt"></i> Saytni ko'rish
+                            </a>
+                            <a href="https://github.com/murodjonismoilov53-wq/my-project" target="_blank" class="py-2.5 px-4 rounded-xl glass hover:bg-gray-800 text-gray-300 font-medium text-sm text-center transition-all flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 border-t border-gray-800/40">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center gap-3">
+                <i class="fa-solid fa-paper-plane text-blue-400"></i> Bog'lanish
+            </h2>
+            <p class="text-gray-400 mb-10 text-sm sm:text-base">
+                Savollaringiz bormi yoki hamkorlik qilmoqchimisiz? Quyidagi manzillar orqali bog'lanishingiz mumkin!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://github.com/murodjonismoilov53-wq" target="_blank" class="glass px-6 py-3.5 rounded-xl hover:border-blue-500/50 flex items-center gap-3 text-gray-300 transition-all">
+                    <i class="fa-brands fa-github text-xl"></i> GitHub Profilim
+                </a>
+                <a href="https://transcendent-starlight-b2cce7.netlify.app" target="_blank" class="glass px-6 py-3.5 rounded-xl hover:border-blue-500/50 flex items-center gap-3 text-gray-300 transition-all">
+                    <i class="fa-solid fa-globe text-xl text-blue-400"></i> Netlify Saytim
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-800/50">
+        <p>&copy; 2026 Ismoilov Murodjon. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
